@@ -1,3 +1,36 @@
+const buscador_codigo = document.getElementById('buscar_persona');
+
+
+buscador_codigo.onkeyup = function () {
+    let codigo = buscador_codigo.value;
+    Buscar_por_codigo(codigo);
+}
+
+function Buscar_por_codigo(codigo) {
+    let contenido = document.getElementById('contenido_persona');
+
+    contenido.innerHTML = "";
+    fetch("https://picsum.photos/id/" + codigo + "/info")
+        .then((respuesta) => respuesta.json())
+        .then((respuesta) => {
+
+            console.log(respuesta);
+           contenido.innerHTML +=
+           `
+                <div class="card" style="width: 30rem;">
+                    <img src="${respuesta.download_url}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${respuesta.author}</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+           `
+        })
+        .catch((error) => console.log(error));
+}
+
 function Lorempicsum() {
     // fetch("https://randomuser.me/api/")
     let contenido = document.querySelector('#contenido');
@@ -26,7 +59,6 @@ function Lorempicsum() {
         })
         .catch((error) => console.log('error'));
 }
-
 
 Lorempicsum();
 

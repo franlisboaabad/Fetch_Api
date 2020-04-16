@@ -28,11 +28,11 @@
                         <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="api.html" > Galería </a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="api.html"> Galería </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consultas.html" > Consultas </a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="consultas.html"> Consultas </a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -44,12 +44,18 @@
 
 
         <div class="container-fluid my-5">
-            <h2 class="text-center">API GALERIA IMAGENES </h2>
+            <h2 class="text-center">API CONSULTAS </h2>
             <hr>
 
+            <div class="row">
+                <div class="col-md-2"><label for="">Ingresar codigo de persona</label></div>
+                <div class="col-md-4">
+                    <input type="text" name="" id="buscar_persona" class="form-control">
+                </div>
+            </div>
 
-            <div class="row" id="contenido"></div>>
-                
+
+            <div class="contenido_persona mt-5" id="contenido_persona"></div>
         </div>
 
 
