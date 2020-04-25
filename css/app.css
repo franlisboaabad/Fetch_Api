@@ -1,6 +1,14 @@
+
+
+
+/*footer index*/
 .page-footer{
-    height: 200px;
-    background-color: gray;
+    background-color: #222;
     color: white;
     padding: 20px;
+}
+
+.page-footer .copyright{
+    padding-top: 20px;
+    padding-bottom: 0%;
 }
